@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
-   validates :email, presence: true
+  validates :email, presence: true
 
   def test
-    self.update(password: self.password.split('').shuffle.join)
+    update(password: password.split('').shuffle.join)
   end
 
   def self.duplicate(user)
