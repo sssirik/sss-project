@@ -1,7 +1,9 @@
-class ApplicationRecord < ActiveRecord::Base
-	primary_abstract_class
+# frozen_string_literal: true
 
-	def hello_world
-	  puts 'Hello, world'
-	end
+class ApplicationRecord < ActiveRecord::Base
+  primary_abstract_class
+
+  def hello_world
+    puts 'Hello, world'
+  end
 end
